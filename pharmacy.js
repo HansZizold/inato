@@ -12,10 +12,10 @@ export class Pharmacy {
   }
   updateBenefitValue() {
     for (var i = 0; i < this.drugs.length; i++) {
-      switch(this.drugs[i].name) {
-        case 'Herbal Tea':
+      switch (this.drugs[i].name) {
+        case "Herbal Tea":
           // At the end of each day our system lowers both values for every drug
-          // "Herbal Tea" actually increases in Benefit the older it gets 
+          // "Herbal Tea" actually increases in Benefit the older it gets
           this.drugs[i].benefit = this.drugs[i].benefit + 1;
           this.drugs[i].expiresIn = this.drugs[i].expiresIn - 1;
           // Benefit increases twice as fast after the expiration date
@@ -27,9 +27,9 @@ export class Pharmacy {
             this.drugs[i].benefit = 50;
           }
           break;
-        case 'Magic Pill':
+        case "Magic Pill":
           break;
-        case 'Fervex':
+        case "Fervex":
           // At the end of each day our system lowers both values for every drug
           // "Fervex" increases in Benefit as its expiration date approaches
           this.drugs[i].benefit = this.drugs[i].benefit + 1;
@@ -51,7 +51,7 @@ export class Pharmacy {
             this.drugs[i].benefit = 50;
           }
           break;
-        case 'Dafalgan':
+        case "Dafalgan":
           // At the end of each day our system lowers both values for every drug
           this.drugs[i].benefit = this.drugs[i].benefit - 2;
           this.drugs[i].expiresIn = this.drugs[i].expiresIn - 1;
@@ -77,7 +77,7 @@ export class Pharmacy {
             this.drugs[i].benefit = 0;
           }
           break;
-      }      
+      }
     }
     return this.drugs;
   }
